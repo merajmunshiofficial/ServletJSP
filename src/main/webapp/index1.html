@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Why Servlet</title>
+</head>
+<body>
+	<!-- 
+    	 Expanding the previous simple HTML page 
+		 Here we highlight the need of server side coding in form of Servlet
+		 through HTML form element 
+		 the example takes 2 user input for "add" function 
+		 and uses a button "Submit" to call the servlet module 
+	-->
+
+	<form action="add" method="get">  
+	    <hr>
+			Enter 1st number : <input type="text" name="num1"/><br/>
+			Enter 2nd number : <input type="text" name="num2"/><br/>
+		<br/>
+			<input type="submit" />
+		<hr>
+		
+		<!-- 
+			 First run on submit forms the url -> http://localhost:8080/Debasis-JspServlet/index1.html?num1=7&num2=8 
+			 Second run with action="add" forms the url -> http://localhost:8080/Debasis-JspServlet/add?num1=8&num2=9 
+			 where it calls the add action. Note: the url does not have index1.html instead has /add? 
+			 but add url in action calling "add page" cannot be found in the Webcontainer of Server Tomcat, that's the reason failing
+			 Hence the request successfully gets processed in the Tomcat server but ends up with error 404 "page not found" 
+		-->	
+	</form>
+</body>
+</html>

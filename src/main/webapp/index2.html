@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Form with Post</title>
+</head>
+<body>
+	<!-- 
+		The Servlet find the method of post or get by the method element.
+		If nothing is mentioned default is Get
+		With Get method the url?<Query string> is exposed, whereas in post the query string is not passed
+		this is good for security
+		so, in form we generally put the method as post
+		and in Servlet we use doPost() instead of doGet()  
+	-->
+
+	<form action="addpost" method="post">
+	    <hr>
+			Enter 1st number : <input type="text" name="num1"/><br/>
+			Enter 2nd number : <input type="text" name="num2"/><br/>
+		<br/>
+			<input type="submit" />
+		<hr>
+		
+		<!-- 
+			When run with post the browser has only the action displayed
+			http://localhost:8081/Debasis-JspServlet/addpost	  
+		-->	
+	</form>
+</body>
+</html>
